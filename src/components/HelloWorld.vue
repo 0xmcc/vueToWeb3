@@ -35,9 +35,8 @@
 ///import keccak256 from 'keccak256';
 ////import { createAlchemyWeb3 } from "@alch/alchemy-web3"
 //nst createAlchemyWeb3 = require('@alch/alchemy-web3');
-import { createAlchemyWeb3 } from "@alch/alchemy-web3";
-
 //const abi = require('../utils/abi.js');
+import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 
 const contractAddress = "0x1224536fd4b7DE15240Fa1b548dEc72dCF2B98b7";
 const API_URL = 'https://eth-ropsten.alchemyapi.io/v2/I0zG-OuWm-0z3MOGj7lHLtkUf54wI7Xk'
@@ -57,8 +56,7 @@ export default {
       console.log("hi", API_URL)
       console.log(contractAddress)
       const web3 = createAlchemyWeb3(API_URL)
-      console.log("here")
-      const contract = new web3.eth.Contract(abi, this.contractAddress);
+      const contract = new web3.eth.Contract(abi, contractAddress);
       console.log("CONTRACT", contract)
 
     }
